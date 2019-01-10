@@ -82,9 +82,15 @@ import axios from "axios";
 const REST_API_VERSION = "api/exp/";
 
 // Set-up our Tableau REST API variables
-const TABLEAU_BASE_URL = inputBaseURL.value.trim();
-const SITE_ID = inputSiteID.value.trim();
-const AUTH_TOKEN = inputAuthToken.value.trim();
+let TABLEAU_BASE_URL = '';
+let SITE_ID = '';
+let AUTH_TOKEN = '';
+console.log("hi");
+// if (inputBaseURL && inputBaseURL.value)
+//   TABLEAU_BASE_URL = inputBaseURL.value.trim();
+
+// const SITE_ID = inputSiteID.value.trim();
+// const AUTH_TOKEN = inputAuthToken.value.trim();
 
 let REST_LIST_WEBHOOKS = `${TABLEAU_BASE_URL}${REST_API_VERSION}sites/${SITE_ID}/webhooks`;
 const CONFIG = {
